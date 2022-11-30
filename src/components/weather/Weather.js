@@ -1,7 +1,7 @@
 import "./Weather.scss";
 
-function Wearher() {
+function Weather() {
   return <div>weather</div>;
 }
 
-export default Wearher;
+export default Weather;

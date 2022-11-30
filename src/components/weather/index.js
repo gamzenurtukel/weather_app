@@ -1,1 +1,1 @@
-export { default } from "./Wearher";
+export { default } from "./Weather";
