@@ -1,3 +1,21 @@
+@import "./styles/font.scss";
+
+* {
+  font-family: $font-stack;
+}
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-block: 6.5rem;
+}
+
+body {
+  height: 100vh;
+}
+
+html {
+  background-image: url(./img/weather.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
