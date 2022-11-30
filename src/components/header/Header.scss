@@ -1,0 +1,8 @@
+@import "../../styles/color.scss";
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  color: $cadet-blue-crayola;
+  padding-left: 1rem;
+}
