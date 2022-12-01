@@ -5,8 +5,7 @@
 }
 .App {
   display: flex;
-  justify-content: center;
-  padding-block: 6.5rem;
+  flex-direction: column;
 }
 
 body {
