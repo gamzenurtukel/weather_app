@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+@import "../../styles/color.scss";
+
+@media (max-width: $xxl) {
+  .weather {
+    flex-direction: column;
+  }
+}
+
+.weather {
+  display: flex;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  .weather-city {
+    flex: 100%;
+    justify-content: flex-start;
+    color: $cadet-blue-crayola;
+    column-gap: 1rem;
+    p {
+      font-size: 2em;
+      font-weight: 800;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+  .weather-detail {
+    padding-top: 1rem;
+    flex: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .weather-temperature {
+      flex: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: $davys-grey;
+
+      .weather-icon {
+        font-size: 9em;
+      }
+      .degrees-value {
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+      }
+      .weather-status {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .weather-temperature-other {
+      flex: 50%;
+      height: 400px;
+      border: none;
+      border-radius: 0.7em;
+      background: $isabelline;
+      opacity: 0.4;
+      color: #000000;
+    }
+  }
+}
