@@ -1,14 +1,9 @@
 @import "../../styles/variables.scss";
 @import "../../styles/color.scss";
 
-@media (max-width: $xxl) {
-  .weather {
-    flex-direction: column;
-  }
-}
-
 .weather {
   display: flex;
+  flex-direction: column;
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
