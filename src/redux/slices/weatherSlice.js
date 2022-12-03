@@ -6,7 +6,7 @@ export const fetchAsyncWeather = createAsyncThunk(
   "weather/fetchAsyncWeather",
   async ({ value }) => {
     const response = await weatherApi.get(
-      `q=${value}&appid=${weatherApiKey}&units=metric`
+      `zip=38000&q=${value},tr&appid=${weatherApiKey}&units=metric`
     );
     return response.data;
   }
@@ -24,13 +24,13 @@ const weatherSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchAsyncWeather.pending]: (state) => {
+      console.log("fullfilled");
       return { ...state, loading: true, error: false };
     },
     [fetchAsyncWeather.fulfilled]: (state, { payload }) => {
       return { ...state, weather: payload };
     },
     [fetchAsyncWeather.rejected]: (state) => {
-      alert("weather not loaded");
       return { ...state, loading: false, error: true };
     },
   },
