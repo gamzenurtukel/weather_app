@@ -12,7 +12,7 @@ function SearchBar() {
   const debouncedValue = useDebounce(inputValue, 1500);
 
   useEffect(() => {
-    dispatch(fetchAsyncWeather(debouncedValue));
+    dispatch(fetchAsyncWeather({ value: debouncedValue }));
   }, [dispatch, debouncedValue]);
 
   const formOnSubmit = (e) => {
