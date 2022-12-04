@@ -13,7 +13,7 @@ export const fetchAsyncWeather = createAsyncThunk(
 );
 
 const initialState = {
-  weather: {},
+  weatherItem: {},
   loading: true,
   error: false,
 };
@@ -28,7 +28,7 @@ const weatherSlice = createSlice({
       return { ...state, loading: true, error: false };
     },
     [fetchAsyncWeather.fulfilled]: (state, { payload }) => {
-      return { ...state, weather: payload };
+      return { ...state, weatherItem: payload };
     },
     [fetchAsyncWeather.rejected]: (state) => {
       return { ...state, loading: false, error: true };
@@ -36,5 +36,4 @@ const weatherSlice = createSlice({
   },
 });
 
-export const getWeather = (state) => state.weathers.weather;
 export default weatherSlice.reducer;
