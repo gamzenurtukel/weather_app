@@ -1,5 +1,7 @@
 import "./WeatherRightItem.scss";
 
+import moment from "moment";
+
 function WeatherRightItem({ weather }) {
   return (
     <div className="weather-temperature-other">
@@ -23,11 +25,11 @@ function WeatherRightItem({ weather }) {
           <p>Humidity</p>
         </span>
         <span>
-          <span>{weather?.sys?.sunrise}</span>
+          <span>{moment(weather?.sys?.sunrise).format(" h:mm")}</span>
           <p>Sunrise</p>
         </span>
         <span>
-          <span>{weather?.sys?.sunset}</span>
+          <span>{moment(weather?.sys?.sunset).format("h:mm")}</span>
           <p>Sunset</p>
         </span>
       </div>
