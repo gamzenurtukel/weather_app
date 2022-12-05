@@ -24,16 +24,20 @@ const weatherSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchAsyncWeather.pending]: (state) => {
-      console.log("fullfilled");
       return { ...state, loading: true, error: false };
     },
     [fetchAsyncWeather.fulfilled]: (state, { payload }) => {
-      return { ...state, weatherItem: payload };
+      return {
+        ...state,
+        weatherItem: payload,
+        loading: false,
+        error: undefined,
+      };
     },
     [fetchAsyncWeather.rejected]: (state) => {
       return { ...state, loading: false, error: true };
     },
   },
 });
-
+export const getLoading = (state) => state.weathers.loading;
 export default weatherSlice.reducer;
