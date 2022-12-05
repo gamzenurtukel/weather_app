@@ -16,9 +16,9 @@ function Weather() {
         <Loader />
       ) : (
         <>
-          <div className="weather-city">
-            <p>Turkey,TR</p>
-            <span>{weather.name}</span>
+          <div className="weather-region">
+            <p className="weather-country">Turkey,TR</p>
+            <span className="weather-city">{weather.name.toUpperCase()}</span>
           </div>
           <div className="weather-detail">
             <WeatherLeftItem weather={weather} />
