@@ -39,5 +39,5 @@ const weatherSlice = createSlice({
     },
   },
 });
-export const getLoading = (state) => state.weathers.loading;
+export const getLoading = (state) => state.weathers?.loading;
 export default weatherSlice.reducer;
