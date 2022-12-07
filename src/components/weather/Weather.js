@@ -7,7 +7,7 @@ import { getLoading } from "../../redux/slices/weatherSlice";
 import Loader from "../loader";
 
 function Weather() {
-  const weather = useSelector((state) => state?.weathers.weatherItem);
+  const weather = useSelector((state) => state?.weathers?.weatherItem);
   const isLoding = useSelector(getLoading);
 
   return (
@@ -18,7 +18,7 @@ function Weather() {
         <>
           <div className="weather-region">
             <p className="weather-country">Turkey,TR</p>
-            <span className="weather-city">{weather.name.toUpperCase()}</span>
+            <span className="weather-city">{weather?.name.toUpperCase()}</span>
           </div>
           <div className="weather-detail">
             <WeatherLeftItem weather={weather} />
